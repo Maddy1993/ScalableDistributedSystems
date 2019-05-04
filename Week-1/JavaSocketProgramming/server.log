@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-04T16:47:38</date>
+  <millis>1557002858677</millis>
+  <sequence>0</sequence>
+  <logger>com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>com.northeastern.server.Server_TCP</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Server Successfully initialized.</message>
+</record>
+</log>
