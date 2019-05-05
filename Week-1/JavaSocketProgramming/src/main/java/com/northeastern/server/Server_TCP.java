@@ -1,8 +1,9 @@
-package com.northeastern.server;
+package main.java.com.northeastern.server;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import main.java.com.northeastern.AbstractManager;
+import main.java.com.northeastern.Utils.Utils;
+
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.FileHandler;
@@ -18,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author mpothukuchi May 4th, 2019.
  */
-public class Server_TCP {
+public class Server_TCP extends AbstractManager {
 
     //Logger for the class.
     private static Logger LOGGER = Logger.getLogger(Server_TCP.class.getName());
@@ -38,20 +39,75 @@ public class Server_TCP {
     /**
      * Constructor for the program to take the
      * port number and create the socket.
-     * @param portNumber The port number to create
-     *                   the socket.
      */
-    private Server_TCP(Integer portNumber) {
+    private Server_TCP() {
+        super();
         try {
             serverSocket = new ServerSocket(portNumber);
             LOGGER.info("Server Successfully initialized.");
-
-            socket = serverSocket.accept();
-            LOGGER.info("Client connection accepted.");
-
-            readData(socket);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * @return Returns the socket associated with the instance of server TCP.
+     */
+    private Socket getSocket() {
+        return this.socket;
+    }
+
+    /**
+     * Initializes the socket associated with the server TCP instance.
+     */
+    private void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    /**
+     * @return Returns the server socket associated with this class.
+     */
+    private ServerSocket getServerSocket() {
+        return this.serverSocket;
+    }
+
+    /**
+     * Reads the data from connection,
+     * sends the data to the client,
+     * and closes the connection.
+     * @param socket The connection of a specific client.
+     */
+    private void connectionHandler(Socket socket) {
+        //Read the data.
+        String inputData = readData(socket);
+        if(inputData == null) {
+            utils.closeConnection(socket);
+        }
+
+        //Apply program specific conversion.
+        inputData = utils.inverseAndReverse(inputData);
+
+        //Send the transformed data back to the
+        //client.
+        sendData(socket, inputData);
+    }
+
+    /**
+     * Accesses the output stream of the socket
+     * and sends the data on the stream.
+     * @param socket The socket to send the data on.
+     * @param data The transformed data to send to the client.
+     */
+    private void sendData(Socket socket, String data) {
+        try {
+            //Open the stream for writing.
+            OutputStream outputStream = socket.getOutputStream();
+            DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
+
+            //Write the data into the stream.
+            dataOutputStream.writeUTF(data);
+        } catch (IOException e) {
+            LOGGER.warning("Error streaming the data to the socket: " + e.getMessage());
         }
     }
 
@@ -62,52 +118,24 @@ public class Server_TCP {
      * reversed.
      * @param socket The socket on which the data is being
      *               received by the client.
+     * @return Returns the transformed string.
      */
-    private void readData(Socket socket) {
-        // get the stream of data.
+    private String readData(Socket socket) {
         try {
+            // get the stream of data.
             InputStream inputStream = socket.getInputStream();
             DataInputStream dataInputStream = new DataInputStream(inputStream);
 
+            //Read the data from the stream.
             String inputData = dataInputStream.readUTF();
+            LOGGER.info("Data received from the client: " + inputData);
 
-            // Apply program specific conversion.
-            inputData = inverseAndReverse(inputData);
-
-
+            //Returns the data.
+            return inputData;
         } catch (IOException e) {
-            LOGGER.severe("Error while reading data from the input stream.\n" + e.getMessage());
-            return;
+            LOGGER.warning("Error while reading data from the input stream.\n" + e.getMessage());
+            return null;
         }
-    }
-
-    /**
-     * Takes a string of characters as input.
-     * Inverses the case of each character in the
-     * string.
-     * Reverse the string
-     * @param inputData The string to apply the transformation.
-     * @return Returns the transformed string.
-     */
-    private String inverseAndReverse(String inputData) {
-        if (inputData != null) {
-            StringBuilder builder = new StringBuilder();
-
-            // Inverse the case of each character and also reverse the string.
-            for(char character: inputData.toCharArray()) {
-                character = Character.isLowerCase(character) ?
-                        Character.toUpperCase(character) :
-                        Character.toLowerCase(character);
-                builder.insert(0, character);
-            }
-
-            inputData = builder.toString();
-        } else {
-            LOGGER.info("Input data given as parameter is null and hence, transformation is" +
-                    "not applied.");
-        }
-
-        return inputData;
     }
 
     /**
@@ -148,6 +176,27 @@ public class Server_TCP {
     public static void main(String[] args) {
         setup();
         parseArguments(args);
-        serverObject = new Server_TCP(portNumber);
+
+        //Initialize the socket.
+        serverObject = new Server_TCP();
+
+        try {
+            //Wait for incoming connections.
+            serverObject.setSocket(serverObject.getServerSocket().accept());
+            LOGGER.info("Client connection accepted.");
+        } catch (IOException e) {
+            LOGGER.severe("Error while accepting connection from the client: " + e.getMessage());
+            System.exit(1);
+        }
+
+        //Process the connection request.
+        //Processing includes the reading the request
+        //and sending the response. After this step, the
+        //connection will be closed by the client and
+        //client socket will no longer be available.
+        serverObject.connectionHandler(serverObject.getSocket());
+        LOGGER.info("socket is no longer available.");
+        LOGGER.info("Program execution complete. Server exiting.");
+        System.exit(0);
     }
 }

@@ -2,14 +2,58 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2019-05-04T16:47:38</date>
-  <millis>1557002858677</millis>
+  <date>2019-05-04T20:21:20</date>
+  <millis>1557015680771</millis>
   <sequence>0</sequence>
-  <logger>com.northeastern.server.Server_TCP</logger>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
   <level>INFO</level>
-  <class>com.northeastern.server.Server_TCP</class>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
   <method>&lt;init&gt;</method>
   <thread>1</thread>
   <message>Server Successfully initialized.</message>
+</record>
+<record>
+  <date>2019-05-04T20:21:47</date>
+  <millis>1557015707484</millis>
+  <sequence>1</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Client connection accepted.</message>
+</record>
+<record>
+  <date>2019-05-04T20:21:55</date>
+  <millis>1557015715678</millis>
+  <sequence>2</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>readData</method>
+  <thread>1</thread>
+  <message>Data received from the client: Hello World</message>
+</record>
+<record>
+  <date>2019-05-04T20:21:55</date>
+  <millis>1557015715680</millis>
+  <sequence>3</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>socket is no longer available.</message>
+</record>
+<record>
+  <date>2019-05-04T20:21:55</date>
+  <millis>1557015715680</millis>
+  <sequence>4</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Program execution complete. Server exiting.</message>
 </record>
 </log>
