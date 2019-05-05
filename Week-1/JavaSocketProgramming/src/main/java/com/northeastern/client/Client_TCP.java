@@ -1,7 +1,6 @@
 package main.java.com.northeastern.client;
 
 import main.java.com.northeastern.AbstractManager;
-import main.java.com.northeastern.Utils.Utils;
 
 import java.io.*;
 import java.net.Socket;
@@ -151,7 +150,7 @@ public class Client_TCP extends AbstractManager {
         }
 
         //Close streams
-        utils.closeStreams(clientObject.getSocket());
+        //utils.closeStreams(clientObject.getSocket());
 
         //Close socket.
         utils.closeConnection(clientObject.getSocket());
