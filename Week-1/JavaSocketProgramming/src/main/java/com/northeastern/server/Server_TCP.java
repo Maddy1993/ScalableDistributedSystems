@@ -1,6 +1,5 @@
 package main.java.com.northeastern.server;
 
-import main.java.com.northeastern.AbstractManager;
 import main.java.com.northeastern.Utils.Utils;
 
 import java.io.*;
@@ -19,10 +18,13 @@ import java.util.logging.Logger;
  *
  * @author mpothukuchi May 4th, 2019.
  */
-public class Server_TCP extends AbstractManager {
+public class Server_TCP {
 
     //Logger for the class.
-    private static Logger LOGGER = Logger.getLogger(Server_TCP.class.getName());
+    static Logger LOGGER = Logger.getLogger(Server_TCP.class.getName());
+
+    //Port Number for the server
+    static Integer portNumber;
 
     //Instance of the class
     private static Server_TCP serverObject;
@@ -33,16 +35,16 @@ public class Server_TCP extends AbstractManager {
     //Socket for incoming requests.
     private Socket socket;
 
-    //Port Number for the server
-    private static Integer portNumber;
+    //Utils instance for the server
+    private Utils utils;
 
     /**
      * Constructor for the program to take the
      * port number and create the socket.
      */
-    private Server_TCP() {
-        super();
+    public Server_TCP() {
         try {
+            utils = new Utils("tcp_server_utils.log");
             serverSocket = new ServerSocket(portNumber);
             LOGGER.info("Server Successfully initialized.");
         } catch (IOException e) {
@@ -141,12 +143,15 @@ public class Server_TCP extends AbstractManager {
     /**
      * Used for any setup required before the program execution
      * starts.
+     *
+     * @param name  Name of the logger to use for the
+     *              overriding class.
      */
-    private static void setup() {
+    static void setup(String name) {
         //Initialize the logger.
         try {
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./server.log"));
+            LOGGER.addHandler(new FileHandler(name));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }
@@ -158,11 +163,11 @@ public class Server_TCP extends AbstractManager {
      * line arguments.
      * @param args  List of command line arguments
      */
-    private static void parseArguments(String[] args) {
+    static void parseArguments(String[] args) {
         if (args.length == 1) {
             try {
                 portNumber = Integer.parseInt(args[0]);
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException exception) {
                 LOGGER.severe("Port number needs to be an integer.");
                 System.exit(1);
             }
@@ -174,7 +179,7 @@ public class Server_TCP extends AbstractManager {
 
     // Driver Program for the server.
     public static void main(String[] args) {
-        setup();
+        setup("server_tcp.log");
         parseArguments(args);
 
         //Initialize the socket.

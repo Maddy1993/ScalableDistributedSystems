@@ -9,32 +9,26 @@ public class Utils {
     //Logger for the class instance.
     private static Logger LOGGER;
 
-    //Singleton instance of the class.
-    private static Utils instance;
-
-    static {
-        instance = new Utils();
-    }
-
-    private Utils() {
+    /**
+     *
+     * @param logName
+     */
+    public Utils(String logName) {
         //Initialize the logger.
         try {
+            //validate the log name to end with .log extension.
+            //Else terminate the program.
+            if (!logName.endsWith(".log")) {
+                System.out.print("Incorrect log name format. Should end with .log extension");
+                System.exit(-1);
+            }
+
             LOGGER = Logger.getLogger(Utils.class.getName());
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./utils.log"));
+            LOGGER.addHandler(new FileHandler(logName));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }
-    }
-
-    /**
-     * Maintaining the singleton instance of a class as the
-     * loggers needs to record events for all the accesses of the
-     * methods.
-     * @return The instance of the class.
-     */
-    public static Utils getInstance() {
-        return instance;
     }
 
     /**
@@ -74,11 +68,11 @@ public class Utils {
      */
     public void closeStreams(Socket socket) {
         try {
-            //Close the output stream.
-            socket.getOutputStream().close();
-
             //Close the input stream.
             socket.getInputStream().close();
+
+            //Close the output stream.
+            socket.getOutputStream().close();
         } catch (IOException e) {
             LOGGER.warning("Error while closing input and output streams for socket: "
                     + socket.getLocalSocketAddress() + ". The error message: " + e.getMessage());

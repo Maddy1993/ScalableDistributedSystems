@@ -1,6 +1,6 @@
 package main.java.com.northeastern.client;
 
-import main.java.com.northeastern.AbstractManager;
+import main.java.com.northeastern.Utils.Utils;
 
 import java.io.*;
 import java.net.Socket;
@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author mpothukuchi May 4, 2019
  */
-public class Client_TCP extends AbstractManager {
+public class Client_TCP {
 
     //Logger for the class.
     private static Logger LOGGER = Logger.getLogger(Client_TCP.class.getName());
@@ -36,13 +36,17 @@ public class Client_TCP extends AbstractManager {
     //Socket for the client to send the data
     private Socket clientSocket;
 
+    //Utils instance for the client
+    private static Utils utils;
+
     /**
      * Constructor which sends the data to the server,
      * and reads the response from the server.
      */
     private Client_TCP() {
+        utils = new Utils("client_utils.log");
+
         //Creates the connection to the client.
-        super();
         createSocket();
     }
 
