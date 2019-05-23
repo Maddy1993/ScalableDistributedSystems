@@ -50,7 +50,7 @@ public class Server_UDP {
     DatagramPacket packet;
 
     //Client to packet mapping store.
-    Map<String, Map<Integer, Object>> clientPacketMapper;
+    Map<String, Map<String, Object>> clientPacketMapper;
 
     /**
      * Constructor for the program to take the
@@ -58,9 +58,10 @@ public class Server_UDP {
      */
     private Server_UDP() {
         try {
-            utils = new Utils("udp_server_utils.log");
+            utils = new Utils("logs/udp/udp_server_utils.log");
             socket = new DatagramSocket(portNumber);
             clientPacketMapper = new HashMap<>();
+            formatMessage("UDP Server Successfully initialized.");
             LOGGER.info("UDP Server Successfully initialized.");
         } catch (IOException e) {
             LOGGER.severe("Error initializing datagram socket: "
@@ -90,7 +91,7 @@ public class Server_UDP {
 
         //Mapper.
         if (clientPacketMapper.containsKey(clientAddress)) {
-            Map<Integer, Object> clientValueSet = clientPacketMapper.get(clientAddress);
+            Map<String, Object> clientValueSet = clientPacketMapper.get(clientAddress);
 
             switch (receivedPacket.getPacketType()) {
                 case GET:
@@ -103,14 +104,14 @@ public class Server_UDP {
                     break;
                 case PUT:
                     List<Object> data = (List<Object>) receivedPacket.getData();
-                    clientValueSet.put((Integer)data.get(0), data.get(1));
+                    clientValueSet.put((String) data.get(0), data.get(1));
                     break;
                 case DELETE:
                     if (clientValueSet.size() == 0) {
                         LOGGER.warning("Key value store for the client is empty.");
                     }
 
-                    Integer dataVal = (Integer) receivedPacket.getData();
+                    String dataVal = (String) receivedPacket.getData();
                     clientValueSet.remove(dataVal);
                     break;
                 case DATA:
@@ -119,7 +120,7 @@ public class Server_UDP {
         }
 
         //print to screen.
-        formatMessage(clientAddress, port);
+        formatMessage(clientAddress+ ":" + port);
     }
 
     /**
@@ -144,7 +145,15 @@ public class Server_UDP {
                     inputPacket.getPort());
             socket.send(response);
         } catch (IOException e) {
-            e.printStackTrace();
+            formatMessage(
+                    "Send packet to: "
+                            + inputPacket.getAddress().toString()
+                            + "on " + inputPacket.getPort()
+                            + " failed.");
+            LOGGER.warning("Send packet to: "
+                    + inputPacket.getAddress().toString()
+                    + "on " + inputPacket.getPort()
+                    + " failed: " + e.getMessage());
         }
     }
 
@@ -181,13 +190,11 @@ public class Server_UDP {
     /**
      * Formats the message to be printed to the output stream.
      *
-     * @param clientAddress Address of the incoming request.
-     * @param port  The port number of the incoming request.
+     * @param message The message to print to screen
      */
-    private void formatMessage(String  clientAddress, int port) {
-        System.out.print("< " + LocalDateTime.now() + " ");
-        System.out.print(clientAddress);
-        System.out.print(": " +  port + " > ");
+    private void formatMessage(String  message) {
+        System.out.print("<" + LocalDateTime.now() + ">> ");
+        System.out.println(message);
     }
 
     /**
@@ -260,7 +267,7 @@ public class Server_UDP {
 
     // Driver Program for the server.
     public static void main(String[] args) {
-        setup("server_udp.log");
+        setup("logs/udp/server_udp.log");
         parseArguments(args);
 
         //Instantiate the datagram object.

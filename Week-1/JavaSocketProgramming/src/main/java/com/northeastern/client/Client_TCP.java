@@ -92,7 +92,7 @@ public class Client_TCP {
         //Initialize the logger.
         try {
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./client.log"));
+            LOGGER.addHandler(new FileHandler("logs/client_tcp.log"));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }

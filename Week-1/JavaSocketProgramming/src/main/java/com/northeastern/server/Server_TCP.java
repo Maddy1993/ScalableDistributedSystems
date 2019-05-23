@@ -179,7 +179,7 @@ public class Server_TCP {
 
     // Driver Program for the server.
     public static void main(String[] args) {
-        setup("server_tcp.log");
+        setup("logs/tcp/server_tcp.log");
         parseArguments(args);
 
         //Initialize the socket.
