@@ -2,6 +2,8 @@ package main.java.com.northeastern.Utils;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.SocketException;
+import java.time.LocalDateTime;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -98,22 +100,62 @@ public class Utils {
      *
      * @param socket Represents the socket whose input stream needs
      *               to be read.
+     * @param source Integer represents source of incoming socket.
+     *               1- server
+     *               2- client
      * @return The data which has been read from the server socket.
      */
-    public String readData(Socket socket) {
-        String readData = null;
-        try {
-            //Open the streams.
-            InputStream inputStream = socket.getInputStream();
-            DataInputStream dataInputStream = new DataInputStream(inputStream);
+    public DataPacket readData(Socket socket, int source){
+        DataPacket readData;
 
-            //Read the data from the stream.
-            readData = dataInputStream.readUTF();
+        //Set timeout only for client.
+        if (source == 2) {
+            try {
+                socket.setSoTimeout(10000);
+            } catch (SocketException e) {
+                formatMessage("Error initializing the socket timeout.");
+                LOGGER.warning("Error initializing socket timeout.");
+                return null;
+            }
+        }
+
+        //Open the streams.
+        InputStream inputStream = null;
+        try {
+            inputStream = socket.getInputStream();
         } catch (IOException e) {
-            LOGGER.warning("Error reading data from the input stream: " + e.getMessage());
+            formatMessage("Error acquiring input stream for the socket.");
+            LOGGER.info("Error acquiring input stream for network socket: " + e.getMessage());
+            return null;
+        }
+
+        DataInputStream dataInputStream = new DataInputStream(inputStream);
+
+        ObjectInputStream objectInputStream;
+        try {
+            objectInputStream = new ObjectInputStream(dataInputStream);
+            readData = (DataPacket) objectInputStream.readObject();
+        } catch (IOException e) {
+            formatMessage("Error reading data on network socket: " + e.getMessage());
+            LOGGER.info("Error reading data on network socket: " + e.getMessage());
+            return null;
+        } catch (ClassNotFoundException e) {
+            formatMessage("Error casting object data from network into data packet class");
+            LOGGER.info("Error casting object data from network into data packet class: " + e.getMessage());
+            return null;
         }
 
         return readData;
+    }
+
+    /**
+     * Formats the message to be printed to the output stream.
+     *
+     * @param message The message to print to screen
+     */
+    public void formatMessage(String  message) {
+        System.out.print("<" + LocalDateTime.now() + ">> ");
+        System.out.println(message);
     }
 
     /**
@@ -123,17 +165,21 @@ public class Utils {
      * @param socket Represents the socket on which the data needs
      *               to be written to its output stream.
      */
-    public void writeData(String readData, Socket socket) {
-        try {
+    public void writeData(DataPacket readData, Socket socket) {
+        try{
             //Opens the output stream.
             OutputStream outputStream = socket.getOutputStream();
             DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
 
+            ObjectOutputStream objectOutputStream
+                    = new ObjectOutputStream(dataOutputStream);
+
             //Write the data to the stream.
-            dataOutputStream.writeUTF(readData);
+            objectOutputStream.writeObject(readData);
         } catch (IOException e) {
-            LOGGER.warning("Error writing data to the output stream of socket: " + socket.getLocalAddress()
-                    + " with error: " + e.getMessage());
+            formatMessage("Error reading data to network socket.");
+            LOGGER.info("Error reading data to network socket: " + e.getMessage());
         }
+
     }
 }

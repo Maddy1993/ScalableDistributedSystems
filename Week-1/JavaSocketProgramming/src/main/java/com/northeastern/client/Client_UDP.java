@@ -5,12 +5,15 @@ import main.java.com.northeastern.Utils.Utils;
 
 import java.io.*;
 import java.net.*;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
+import java.util.stream.Stream;
 
 /**
  * The class represents a UDP client.
@@ -108,7 +111,7 @@ public class Client_UDP {
             buffer = outputStream.toByteArray();
             packet = new DatagramPacket(buffer, buffer.length, serverAddress, portNumber);
             clientSocket.send(packet);
-            formatMessage("Message successfully send to server on: " + serverAddress.toString() + "-" + portNumber);
+            formatMessage("Message successfully sent to server on: " + serverAddress.toString().replace("/", "") + ":" + portNumber);
         } catch (IOException e) {
             formatMessage(
                     "Send packet to: "
@@ -134,6 +137,7 @@ public class Client_UDP {
         try {
             buffer = new byte[packetSize];
             packet = new DatagramPacket(buffer, buffer.length);
+            clientSocket.setSoTimeout(10000);
             clientSocket.receive(packet);
 
             ObjectInputStream objectInputStream =
@@ -146,12 +150,12 @@ public class Client_UDP {
         } catch (IOException e) {
             formatMessage(
                     "Receiving packet from: "
-                            + serverAddress.toString()
-                            + "on " + portNumber
+                            + serverAddress.toString().replace("/", "")
+                            + " on " + portNumber
                             + " failed.");
             LOGGER.warning("Receiving packet from: "
-                    + serverAddress.toString()
-                    + "on " + portNumber
+                    + serverAddress.toString().replace("/", "")
+                    + " on " + portNumber
                     + " failed: " + e.getMessage());
             return null;
         } catch (ClassNotFoundException e) {
@@ -170,47 +174,197 @@ public class Client_UDP {
      * the client and performs the operation based on that.
      */
     private void receiveOptionAndExecute() {
-        System.out.println("Please choose the operation to perform:");
-        System.out.println("\t1. Get Data.\n\t2. Save Data.\n\t3. Delete data");
-        System.out.print("Enter the option: ");
+        do {
+            formatMessage("\nPlease choose the operation to perform:");
+            System.out.println("\t1. Get Data.\n\t2. Save Data.\n\t3. Delete data.\n\t4. Quit");
+            System.out.println("\nEnter the option number: ");
 
-        Scanner input = new Scanner(System.in);
-        int option = input.nextInt();
+            Scanner input = new Scanner(System.in);
+            int option = 0;
+            try {
+                option = input.nextInt();
+            } catch (NoSuchElementException e) {
+                LOGGER.warning("Error reading integer: " + e.getMessage());
+            }
 
-        //Execute the operation.
-        DataPacket dataPacket = null;
-        String fileName = null;
-        String data = null;
-        switch (option) {
-            case 1:
-                System.out.println("\nEnter the filename: ");
-                fileName = input.nextLine();
-                dataPacket = new DataPacket(DataPacket.PacketType.GET, fileName);
-                clientObject.sendPacket(dataPacket);
-                clientObject.receivePacket();
-                System.out.print("The message for filename " + fileName + " is " + dataPacket.getData());
-                break;
-            case 2:
-                System.out.println("\nEnter the data: ");
-                data = input.nextLine();
-                System.out.print("\nEnter the fileName for the data: ");
-                fileName = input.nextLine();
-                keys.add(fileName);
-                List<String> values = new ArrayList<>();
-                values.add(fileName);
-                values.add(data);
-                dataPacket = new DataPacket(DataPacket.PacketType.PUT, values);
-                clientObject.sendPacket(dataPacket);
-                break;
-            case 3:
-                System.out.print("\nEnter the filename to delete: ");
-                fileName = input.nextLine();
-                dataPacket = new DataPacket(DataPacket.PacketType.DELETE, fileName);
-                clientObject.sendPacket(dataPacket);
-                break;
-            default:
-                System.out.println("Invalid Option Entered.");
-                LOGGER.warning("Invalid Option: " + option + "entered.");
+            //Execute the operation.
+            DataPacket dataPacket = null;
+            String fileName = null;
+            String data = null;
+            int responseCode;
+            switch (option) {
+                case 1:
+                    //Print the list of available keys with the server.
+                    responseCode = getKeyList();
+                    if (responseCode == 0) {
+                        break;
+                    }
+
+                    System.out.println("List of Available keys with the server:");
+                    Stream.of(keys).forEach(x->System.out.println("\t" + x));
+
+                    if (keys.size() == 0) {
+                        break;
+                    }
+
+                    //Enter the file name from the available list.
+                    System.out.println("\nEnter the filename: ");
+                    do{
+                        fileName = input.nextLine();
+                    } while (fileName.isEmpty());
+
+                    //Pack the data based on the file name as the object data.
+                    dataPacket = new DataPacket(DataPacket.PacketType.GET, fileName);
+
+                    //Send the file
+                    clientObject.sendPacket(dataPacket);
+
+                    //Deserialize and receive the file.
+                    DataPacket receivedPacket = clientObject.receivePacket();
+                    if (receivedPacket != null) {
+                        System.out.println("The message for filename " + fileName + " is " + receivedPacket.getData());
+                    }
+                    break;
+                case 2:
+                    //Read the data to store and then
+                    //the respective file name.
+                    System.out.println("\nEnter the data: ");
+                    do{
+                        data = input.nextLine();
+                    } while (data.isEmpty());
+
+                    System.out.print("\nEnter the fileName for the data: ");
+                    do{
+                        fileName = input.nextLine();
+                    } while (fileName.isEmpty());
+
+                    //Create a list of key, value to be sent to the
+                    //server.
+                    List<String> values = new ArrayList<>();
+                    values.add(fileName);
+                    values.add(data);
+
+                    //Pack the values into a datagram packet before being
+                    //serialized.
+                    dataPacket = new DataPacket(DataPacket.PacketType.PUT, values);
+                    clientObject.sendPacket(dataPacket);
+
+                    responseCode = validateSuccessResponse("PUT");
+                    if (responseCode == 0) {
+                        break;
+                    }
+
+                    //Add the file name to list of keys available.
+                    keys.add(fileName);
+
+                    break;
+                case 3:
+                    //Enter the fileName to delete from the list of
+                    //available file names in the server.
+                    responseCode = getKeyList();
+                    if (responseCode == 0) {
+                        break;
+                    }
+
+                    if (keys.size() == 0) {
+                        formatMessage("Cannot delete values are none are saved yet.");
+                    } else {
+                        System.out.println("Available file names with server: ");
+                        Stream.of(keys).forEach(x->System.out.println("\t" + x ));
+                    }
+
+                    System.out.print("\nEnter the filename to delete: ");
+                    do {
+                        fileName = input.nextLine();
+                    } while (fileName.isEmpty());
+
+                    dataPacket = new DataPacket(DataPacket.PacketType.DELETE, fileName);
+                    clientObject.sendPacket(dataPacket);
+
+                    responseCode = validateSuccessResponse("DELETE");
+                    if (responseCode == 0) {
+                        break;
+                    }
+
+                    //Remove the key from the local list as well.
+                    keys.remove(fileName);
+
+                    break;
+                case 4:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Option Entered.");
+                    LOGGER.warning("Invalid Option: " + option + "entered.");
+            }
+        } while (true);
+    }
+
+    /**
+     * Gets the list of keys available for the client
+     * at the server.
+     */
+    private int getKeyList() {
+        DataPacket keyRequestPacket = new DataPacket(DataPacket.PacketType.KEYS, new ArrayList<>());
+
+        //Send request to the server to return keys
+        clientObject.sendPacket(keyRequestPacket);
+
+        //Receive the request and assign the keys to the client
+        //object.
+        DataPacket keyResponsePacket = clientObject.receivePacket();
+        if (keyResponsePacket == null) {
+            return 0;
+        }
+        if (keyResponsePacket.getPacketType() == DataPacket.PacketType.DATA) {
+            Object data = keyResponsePacket.getData();
+            if (data instanceof ArrayList) {
+                clientObject.keys = (ArrayList) data;
+            } else {
+                formatMessage("Incorrect data packet format received while getting keys");
+                LOGGER.warning("Incorrect data packet format received while getting keys");
+            }
+        }
+
+        return 1;
+    }
+
+    /**
+     * Validates the success response from the server.
+     *
+     * @return Response code. 0 for failure. 1 for success.
+     */
+    private int validateSuccessResponse(String operationName) {
+        DataPacket responsePacket = clientObject.receivePacket();
+        if (responsePacket == null) {
+            return 0;
+        }
+
+        //Compare the type of the packet.
+        if (responsePacket.getPacketType() != DataPacket.PacketType.SUCCESS) {
+            System.out.println("Response from server for " + operationName + " failed");
+            LOGGER.info("Response from server for: " + operationName + " failed");
+            return 0;
+        }
+
+        //Compare the time difference between request and response.
+        Object data = responsePacket.getData();
+        if (data instanceof LocalDateTime) {
+            LocalDateTime serverTime = (LocalDateTime) responsePacket.getData();
+            Duration difference = Duration.between(serverTime, LocalDateTime.now());
+
+            if (difference.getSeconds() > 30) {
+                System.out.println("Time slide between response is longer. Response from server not accepted.");
+                LOGGER.warning("Time slide between response is longer. Response from server not accepted.");
+                return 0;
+            } else {
+                System.out.println(operationName + " operation successful");
+                LOGGER.info(operationName + " operation successful");
+                return 1;
+            }
+        } else {
+            System.out.println("Incorrect data packet type sent by server for " + operationName + " operation");
+            LOGGER.info("Incorrect data packet type sent by server for " + operationName + " operation");
+            return 0;
         }
     }
 

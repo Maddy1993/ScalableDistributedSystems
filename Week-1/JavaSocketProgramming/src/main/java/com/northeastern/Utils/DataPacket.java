@@ -17,7 +17,10 @@ public class DataPacket implements Serializable {
         PUT,
         DELETE,
         GET,
-        DATA;
+        DATA,
+        SUCCESS,
+        KEYS,
+        EXIT;
 
         public String toString() {
             return name();
