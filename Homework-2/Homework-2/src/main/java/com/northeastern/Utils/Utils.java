@@ -22,7 +22,7 @@ public class Utils {
         try {
             LOGGER = Logger.getLogger(Utils.class.getName());
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./utils.log"));
+            LOGGER.addHandler(new FileHandler("logs/utils.log"));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }

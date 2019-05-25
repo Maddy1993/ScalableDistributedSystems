@@ -2,6 +2,8 @@ package main.java.com.northeastern.client;
 
 import java.io.*;
 import java.net.Socket;
+import java.time.LocalDateTime;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -63,9 +65,14 @@ public class Client_TCP {
      * @return  Returns the data read from the user.
      */
     private String generateData() {
-        System.out.println("Enter the data: ");
-        Scanner input = new Scanner(System.in);
-        return input.nextLine();
+        try {
+            this.formatMessage("\nEnter the data (Q/q to Exit): ");
+            Scanner input = new Scanner(System.in);
+            return input.nextLine();
+        } catch (NoSuchElementException e) {
+            LOGGER.info("Error while reading input: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -84,6 +91,15 @@ public class Client_TCP {
     }
 
     /**
+     * Formats the message passed as parameter
+     *
+     * @param message Message to print to the screen.
+     */
+    private void formatMessage(String message) {
+        System.out.print("<" + LocalDateTime.now() + "> ");
+        System.out.println(message);
+    }
+    /**
      * Used for any setup required before the program execution
      * starts.
      */
@@ -91,7 +107,7 @@ public class Client_TCP {
         //Initialize the logger.
         try {
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./client.log"));
+            LOGGER.addHandler(new FileHandler("logs/tco/tcp_client.log"));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }
@@ -125,35 +141,39 @@ public class Client_TCP {
         parseArguments(args);
         clientObject = new Client_TCP();
 
-        //Reads the line to be transformed.
-        String readData = clientObject.generateData();
-
-        if (readData != null || readData.length() <=0) {
-            LOGGER.info("Data which is to be sent to the server successfully read.");
-
-            //Write the data to the server connection stream.
-            utils.writeData(readData, clientObject.getSocket());
-            LOGGER.info("Data: " + readData + ", is sent to the server.");
-
-            //Read the data from the server.
-            String serverData = utils.readData(clientObject.getSocket());
-
-            //Compare the result.
-            if(serverData.equalsIgnoreCase(utils.inverseAndReverse(readData))) {
-                System.out.println(serverData);
-                LOGGER.info("Data sent by the server matches.");
-            } else {
-                System.out.println("Data returned by the server does not match.");
-                LOGGER.info("Data returned by the server does not match");
+        while (true) {
+            //Reads the line to be transformed.
+            String readData = clientObject.generateData();
+            if (readData == null) {
+                utils.closeConnection(clientObject.getSocket());
             }
 
-            System.out.println("Process complete. Program exiting.");
-        } else {
-            LOGGER.warning("Data entered by the user is either null or empty. Transmission aborted.");
-        }
+            if (readData.length() <=0 || !readData.equalsIgnoreCase("Q")) {
+                LOGGER.info("Data which is to be sent to the server successfully read.");
 
-        //Close streams
-        //utils.closeStreams(clientObject.getSocket());
+                //Write the data to the server connection stream.
+                utils.writeData(readData, clientObject.getSocket());
+                LOGGER.info("Data: " + readData + ", is sent to the server.");
+
+                //Read the data from the server.
+                String serverData = utils.readData(clientObject.getSocket());
+
+                //Compare the result.
+                if(serverData.equalsIgnoreCase(utils.inverseAndReverse(readData))) {
+                    clientObject.formatMessage("Server response: " +  serverData);
+                    clientObject.formatMessage("Data sent by the server matches.");
+                    LOGGER.info("Data sent by the server matches.");
+                } else {
+                    clientObject.formatMessage("Data returned by the server does not match.");
+                    LOGGER.info("Data returned by the server does not match");
+                }
+
+            } else {
+                clientObject.formatMessage("Data entered by the user is either empty or exit.");
+                LOGGER.warning("Data entered by the user is either empty or exit.");
+                break;
+            }
+        }
 
         //Close socket.
         utils.closeConnection(clientObject.getSocket());

@@ -1,11 +1,14 @@
 
-package main.java.com.northeastern.server;
+package main.java.com.northeastern.MultiThreaded.server;
 
 import main.java.com.northeastern.Utils.Utils;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -19,16 +22,10 @@ import java.util.logging.Logger;
  *
  * @author mpothukuchi May 4th, 2019.
  */
-public class Server_TCP {
+public class Server_TCP implements Runnable {
 
     //Logger for the class.
     private static Logger LOGGER = Logger.getLogger(Server_TCP.class.getName());
-
-    //Instance of the class
-    private static Server_TCP serverObject;
-
-    //Server socket instance.
-    private ServerSocket serverSocket;
 
     //Socket for incoming requests.
     private Socket socket;
@@ -45,13 +42,7 @@ public class Server_TCP {
      */
     private Server_TCP() {
         super();
-        try {
-            serverSocket = new ServerSocket(portNumber);
-            utils = Utils.getInstance();
-            LOGGER.info("Server Successfully initialized.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        utils = Utils.getInstance();
     }
 
     /**
@@ -66,13 +57,6 @@ public class Server_TCP {
      */
     private void setSocket(Socket socket) {
         this.socket = socket;
-    }
-
-    /**
-     * @return Returns the server socket associated with this class.
-     */
-    private ServerSocket getServerSocket() {
-        return this.serverSocket;
     }
 
     /**
@@ -110,6 +94,8 @@ public class Server_TCP {
 
             //Write the data into the stream.
             dataOutputStream.writeUTF(data);
+            formatMessage("> Data sent to client " + socket.getRemoteSocketAddress() + ": " + data);
+            LOGGER.info("Data sent to client " + socket.getRemoteSocketAddress() + ": " + data);
         } catch (IOException e) {
             LOGGER.warning("Error streaming the data to the socket: " + e.getMessage());
         }
@@ -132,7 +118,8 @@ public class Server_TCP {
 
             //Read the data from the stream.
             String inputData = dataInputStream.readUTF();
-            LOGGER.info("Data received from the client: " + inputData);
+            formatMessage("< Data received from the client " + socket.getRemoteSocketAddress() + ": " + inputData);
+            LOGGER.info("Data received from the client " + socket.getRemoteSocketAddress() + ": " + inputData);
 
             //Returns the data.
             return inputData;
@@ -143,6 +130,16 @@ public class Server_TCP {
     }
 
     /**
+     * Formats the message passed as parameter
+     *
+     * @param message Message to print to the screen.
+     */
+    private static void formatMessage(String message) {
+        System.out.print("<" + LocalDateTime.now() + "> ");
+        System.out.println(message);
+    }
+
+    /**
      * Used for any setup required before the program execution
      * starts.
      */
@@ -150,7 +147,7 @@ public class Server_TCP {
         //Initialize the logger.
         try {
             LOGGER.setUseParentHandlers(false);
-            LOGGER.addHandler(new FileHandler("./server.log"));
+            LOGGER.addHandler(new FileHandler("logs/tcp/multi_server.log"));
         } catch (IOException e) {
             System.out.println("Error initializing the logger: " + e.getMessage());
         }
@@ -180,27 +177,49 @@ public class Server_TCP {
     public static void main(String[] args) {
         setup();
         parseArguments(args);
-
-        //Initialize the socket.
-        serverObject = new Server_TCP();
+        List<Thread> threadsAvailable = new ArrayList<>();
 
         try {
-            //Wait for incoming connections.
-            serverObject.setSocket(serverObject.getServerSocket().accept());
-            LOGGER.info("Client connection accepted.");
+            ServerSocket serverSocket = new ServerSocket(portNumber);
+            formatMessage("TCP Server successfully initialized.");
+            LOGGER.info("Server Successfully initialized.");
+
+            while (true) {
+                Server_TCP serverObject = new Server_TCP();
+
+                //Wait for incoming connections.
+                serverObject.setSocket(serverSocket.accept());
+
+                //Create a thread for execution.
+                Thread threadObject = new Thread(serverObject);
+                threadObject.start();
+                threadsAvailable.add(threadObject);
+                LOGGER.info("Client connection accepted.");
+            }
         } catch (IOException e) {
             LOGGER.severe("Error while accepting connection from the client: " + e.getMessage());
             System.exit(1);
         }
+    }
 
+    /**
+     * When an object implementing interface <code>Runnable</code> is used
+     * to create a thread, starting the thread causes the object's
+     * <code>run</code> method to be called in that separately executing
+     * thread.
+     * <p>
+     * The general contract of the method <code>run</code> is that it may
+     * take any action whatsoever.
+     *
+     * @see Thread#run()
+     */
+    @Override
+    public void run() {
         //Process the connection request.
         //Processing includes the reading the request
-        //and sending the response. After this step, the
-        //connection will be closed by the client and
-        //client socket will no longer be available.
-        serverObject.connectionHandler(serverObject.getSocket());
-        LOGGER.info("socket is no longer available.");
-        LOGGER.info("Program execution complete. Server exiting.");
-        System.exit(0);
+        //and sending the response.
+        Socket clientSocket = this.getSocket();
+        this.formatMessage("< Client connection accepted from: " + clientSocket.getRemoteSocketAddress());
+        this.connectionHandler(clientSocket);
     }
 }
