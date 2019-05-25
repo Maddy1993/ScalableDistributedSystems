@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-23T19:58:20</date>
+  <millis>1558655900983</millis>
+  <sequence>2</sequence>
+  <logger>main.java.com.northeastern.Utils.Utils</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.Utils.Utils</class>
+  <method>readData</method>
+  <thread>1</thread>
+  <message>Error reading data on network socket: Read timed out</message>
+</record>
+</log>

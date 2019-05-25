@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-23T19:58:02</date>
+  <millis>1558655882613</millis>
+  <sequence>0</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Server Successfully initialized.</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:04</date>
+  <millis>1558655884982</millis>
+  <sequence>1</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Client connection accepted.</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:08</date>
+  <millis>1558655888153</millis>
+  <sequence>2</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>connectionHandler</method>
+  <thread>1</thread>
+  <message>Received packet from -&gt; 127.0.0.1:64717</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:08</date>
+  <millis>1558655888154</millis>
+  <sequence>3</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>connectionHandler</method>
+  <thread>1</thread>
+  <message>Put request received from client: a</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:09</date>
+  <millis>1558655889766</millis>
+  <sequence>4</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>connectionHandler</method>
+  <thread>1</thread>
+  <message>Received packet from -&gt; 127.0.0.1:64717</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:10</date>
+  <millis>1558655890983</millis>
+  <sequence>5</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>connectionHandler</method>
+  <thread>1</thread>
+  <message>Received packet from -&gt; 127.0.0.1:64717</message>
+</record>
+<record>
+  <date>2019-05-23T19:58:10</date>
+  <millis>1558655890983</millis>
+  <sequence>6</sequence>
+  <logger>main.java.com.northeastern.server.Server_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.server.Server_TCP</class>
+  <method>connectionHandler</method>
+  <thread>1</thread>
+  <message>Incorrect data type for data in the packet. Ignoring request: 123</message>
+</record>
+</log>

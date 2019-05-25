@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-23T22:33:01</date>
+  <millis>1558665181129</millis>
+  <sequence>0</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>createSocket</method>
+  <thread>1</thread>
+  <message>Client Datagram socket created successfully</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:01</date>
+  <millis>1558665181162</millis>
+  <sequence>1</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>Client datagram socket created successfully.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194511</millis>
+  <sequence>2</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194511</millis>
+  <sequence>3</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194512</millis>
+  <sequence>4</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194512</millis>
+  <sequence>5</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194513</millis>
+  <sequence>6</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194513</millis>
+  <sequence>7</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194514</millis>
+  <sequence>8</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194514</millis>
+  <sequence>9</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194515</millis>
+  <sequence>10</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194515</millis>
+  <sequence>11</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194516</millis>
+  <sequence>12</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194516</millis>
+  <sequence>13</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194518</millis>
+  <sequence>14</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194518</millis>
+  <sequence>15</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194519</millis>
+  <sequence>16</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194519</millis>
+  <sequence>17</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194520</millis>
+  <sequence>18</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194520</millis>
+  <sequence>19</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194520</millis>
+  <sequence>20</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194521</millis>
+  <sequence>21</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194522</millis>
+  <sequence>22</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194522</millis>
+  <sequence>23</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194522</millis>
+  <sequence>24</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194523</millis>
+  <sequence>25</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194523</millis>
+  <sequence>26</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194523</millis>
+  <sequence>27</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194524</millis>
+  <sequence>28</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194524</millis>
+  <sequence>29</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194525</millis>
+  <sequence>30</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194525</millis>
+  <sequence>31</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194526</millis>
+  <sequence>32</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194526</millis>
+  <sequence>33</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194527</millis>
+  <sequence>34</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194527</millis>
+  <sequence>35</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194528</millis>
+  <sequence>36</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194528</millis>
+  <sequence>37</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194529</millis>
+  <sequence>38</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194529</millis>
+  <sequence>39</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194529</millis>
+  <sequence>40</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194530</millis>
+  <sequence>41</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194530</millis>
+  <sequence>42</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194530</millis>
+  <sequence>43</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194532</millis>
+  <sequence>44</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194532</millis>
+  <sequence>45</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194532</millis>
+  <sequence>46</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194533</millis>
+  <sequence>47</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194533</millis>
+  <sequence>48</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194533</millis>
+  <sequence>49</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194534</millis>
+  <sequence>50</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194534</millis>
+  <sequence>51</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194535</millis>
+  <sequence>52</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194535</millis>
+  <sequence>53</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194536</millis>
+  <sequence>54</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194536</millis>
+  <sequence>55</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194536</millis>
+  <sequence>56</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194537</millis>
+  <sequence>57</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194537</millis>
+  <sequence>58</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194537</millis>
+  <sequence>59</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194538</millis>
+  <sequence>60</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194538</millis>
+  <sequence>61</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194539</millis>
+  <sequence>62</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194539</millis>
+  <sequence>63</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194540</millis>
+  <sequence>64</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194540</millis>
+  <sequence>65</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194540</millis>
+  <sequence>66</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194541</millis>
+  <sequence>67</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194541</millis>
+  <sequence>68</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194542</millis>
+  <sequence>69</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194542</millis>
+  <sequence>70</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194542</millis>
+  <sequence>71</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194543</millis>
+  <sequence>72</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194543</millis>
+  <sequence>73</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194544</millis>
+  <sequence>74</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194544</millis>
+  <sequence>75</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194544</millis>
+  <sequence>76</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194545</millis>
+  <sequence>77</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194545</millis>
+  <sequence>78</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194545</millis>
+  <sequence>79</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194546</millis>
+  <sequence>80</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194546</millis>
+  <sequence>81</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194546</millis>
+  <sequence>82</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194546</millis>
+  <sequence>83</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194547</millis>
+  <sequence>84</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194547</millis>
+  <sequence>85</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194548</millis>
+  <sequence>86</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194548</millis>
+  <sequence>87</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194548</millis>
+  <sequence>88</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194549</millis>
+  <sequence>89</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194549</millis>
+  <sequence>90</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194549</millis>
+  <sequence>91</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194550</millis>
+  <sequence>92</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194550</millis>
+  <sequence>93</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194551</millis>
+  <sequence>94</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194551</millis>
+  <sequence>95</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194551</millis>
+  <sequence>96</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194551</millis>
+  <sequence>97</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194552</millis>
+  <sequence>98</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194552</millis>
+  <sequence>99</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194553</millis>
+  <sequence>100</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194553</millis>
+  <sequence>101</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194553</millis>
+  <sequence>102</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194553</millis>
+  <sequence>103</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194554</millis>
+  <sequence>104</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194554</millis>
+  <sequence>105</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194554</millis>
+  <sequence>106</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194554</millis>
+  <sequence>107</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194555</millis>
+  <sequence>108</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194555</millis>
+  <sequence>109</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194555</millis>
+  <sequence>110</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194555</millis>
+  <sequence>111</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194556</millis>
+  <sequence>112</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194556</millis>
+  <sequence>113</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194558</millis>
+  <sequence>114</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194558</millis>
+  <sequence>115</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194559</millis>
+  <sequence>116</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194559</millis>
+  <sequence>117</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194559</millis>
+  <sequence>118</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194559</millis>
+  <sequence>119</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194560</millis>
+  <sequence>120</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194560</millis>
+  <sequence>121</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194560</millis>
+  <sequence>122</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194561</millis>
+  <sequence>123</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194561</millis>
+  <sequence>124</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194561</millis>
+  <sequence>125</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194562</millis>
+  <sequence>126</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194562</millis>
+  <sequence>127</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194563</millis>
+  <sequence>128</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194563</millis>
+  <sequence>129</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194563</millis>
+  <sequence>130</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194563</millis>
+  <sequence>131</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194564</millis>
+  <sequence>132</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Error reading integer: null</message>
+</record>
+<record>
+  <date>2019-05-23T22:33:14</date>
+  <millis>1558665194564</millis>
+  <sequence>133</sequence>
+  <logger>main.java.com.northeastern.client.Client_TCP</logger>
+  <level>WARNING</level>
+  <class>main.java.com.northeastern.client.Client_UDP</class>
+  <method>receiveOptionAndExecute</method>
+  <thread>1</thread>
+  <message>Invalid Option: 0entered.</message>
+</record>
+</log>
