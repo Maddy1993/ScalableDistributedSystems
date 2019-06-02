@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-05-23T18:10:04</date>
+  <millis>1558649404900</millis>
+  <sequence>0</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>UDP Server Successfully initialized.</message>
+</record>
+<record>
+  <date>2019-05-23T18:10:04</date>
+  <millis>1558649404908</millis>
+  <sequence>1</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>readData</method>
+  <thread>1</thread>
+  <message>Buffer reset and new datagram packet created.</message>
+</record>
+<record>
+  <date>2019-05-23T18:10:10</date>
+  <millis>1558649410252</millis>
+  <sequence>2</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>readData</method>
+  <thread>1</thread>
+  <message>Packet successfully received from the socket.</message>
+</record>
+<record>
+  <date>2019-05-23T18:10:10</date>
+  <millis>1558649410253</millis>
+  <sequence>3</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>processData</method>
+  <thread>1</thread>
+  <message>Received packet from -&gt; 127.0.0.1:61152</message>
+</record>
+<record>
+  <date>2019-05-23T18:10:10</date>
+  <millis>1558649410277</millis>
+  <sequence>4</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>deserializePacket</method>
+  <thread>1</thread>
+  <message>Deserialization successful.</message>
+</record>
+<record>
+  <date>2019-05-23T18:11:17</date>
+  <millis>1558649477075</millis>
+  <sequence>5</sequence>
+  <logger>main.java.com.northeastern.server.Server_UDP</logger>
+  <level>INFO</level>
+  <class>main.java.com.northeastern.server.Server_UDP</class>
+  <method>readData</method>
+  <thread>1</thread>
+  <message>Buffer reset and new datagram packet created.</message>
+</record>
+</log>
