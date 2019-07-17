@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-07-16T20:53:52</date>
+  <millis>1563324832045</millis>
+  <sequence>0</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>INFO</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Client pre-processing complete.</message>
+</record>
+<record>
+  <date>2019-07-16T20:59:47</date>
+  <millis>1563325187274</millis>
+  <sequence>1</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>WARNING</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>performSelectedOperation</method>
+  <thread>1</thread>
+  <message>Error while retrieving keys from the server- /127.0.0.1:10001: null</message>
+</record>
+<record>
+  <date>2019-07-16T20:59:47</date>
+  <millis>1563325187283</millis>
+  <sequence>2</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>WARNING</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>getAvailableServer</method>
+  <thread>1</thread>
+  <message>Error pinging server: generated.thrift.impl.RPCPacketService$Client@5f341870: org.apache.thrift.transport.TTransportException: java.net.SocketException: Connection reset</message>
+</record>
+<record>
+  <date>2019-07-16T20:59:47</date>
+  <millis>1563325187285</millis>
+  <sequence>3</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>INFO</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>getAvailableServer</method>
+  <thread>1</thread>
+  <message>Connected to replica at: /127.0.0.1:10050</message>
+</record>
+<record>
+  <date>2019-07-16T21:00:07</date>
+  <millis>1563325207572</millis>
+  <sequence>4</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>WARNING</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>performSelectedOperation</method>
+  <thread>1</thread>
+  <message>Error while retrieving keys from the server- /127.0.0.1:10050: null</message>
+</record>
+<record>
+  <date>2019-07-16T21:00:07</date>
+  <millis>1563325207573</millis>
+  <sequence>5</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>INFO</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>getAvailableServer</method>
+  <thread>1</thread>
+  <message>Connected to replica at: /127.0.0.1:10020</message>
+</record>
+<record>
+  <date>2019-07-16T21:00:23</date>
+  <millis>1563325223582</millis>
+  <sequence>6</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>WARNING</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>performSelectedOperation</method>
+  <thread>1</thread>
+  <message>Error while retrieving keys from the server- /127.0.0.1:10020: null</message>
+</record>
+<record>
+  <date>2019-07-16T21:00:23</date>
+  <millis>1563325223582</millis>
+  <sequence>7</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>WARNING</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>getAvailableServer</method>
+  <thread>1</thread>
+  <message>Error pinging server: generated.thrift.impl.RPCPacketService$Client@553f17c: org.apache.thrift.transport.TTransportException</message>
+</record>
+<record>
+  <date>2019-07-16T21:00:23</date>
+  <millis>1563325223582</millis>
+  <sequence>8</sequence>
+  <logger>com.northeastern.edu.client.RPCClient</logger>
+  <level>SEVERE</level>
+  <class>com.northeastern.edu.client.RPCClient</class>
+  <method>getAvailableServer</method>
+  <thread>1</thread>
+  <message>No Available Servers</message>
+</record>
+</log>

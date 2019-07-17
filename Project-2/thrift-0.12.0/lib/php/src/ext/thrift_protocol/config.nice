@@ -1,0 +1,13 @@
+#! /bin/sh
+#
+# Created by configure
+
+LDFLAGS='-L/usr/local/opt/bison/lib' \
+LIBS='-lpthread ' \
+'./configure' \
+'--disable-option-checking' \
+'--prefix=/usr/local' \
+'--cache-file=/dev/null' \
+'--srcdir=.' \
+'CPPFLAGS=' \
+"$@"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-06-12T22:49:06</date>
+  <millis>1560394146388</millis>
+  <sequence>0</sequence>
+  <logger>com.northeastern.edu.server.RPCServer</logger>
+  <level>SEVERE</level>
+  <class>com.northeastern.edu.server.RPCServer</class>
+  <method>parseArguments</method>
+  <thread>1</thread>
+  <message>The server needs the following inputs only:
+	1. Port Number</message>
+</record>
+</log>

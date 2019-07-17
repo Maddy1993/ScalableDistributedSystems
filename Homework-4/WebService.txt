@@ -1,0 +1,17 @@
+The web service implemented uses the RESTful web service. The logic is modulated into model and service classes performing their functionality.
+
+Folder Structure:
+1. src/main/java
+	Root source folder
+2. src/main/java/model:
+	Contains the model needed to implement the service.
+	Voter.java
+		Represents the voter name, voter ID, number of votes accumalted by the voter.
+	Response.java
+		Represents the response class for communication between client and server
+		Have methods which represents the voterName, and number of votes for a voter.
+		Also, specifies is a requested voter is available in the system or not.
+3. src/main/java/service:
+	Contains the Election service and election service implementation classes.
+4. pom.xml:
+	Contains the maven repository source build and dependacies definition.
