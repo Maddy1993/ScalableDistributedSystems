@@ -21,7 +21,10 @@ Design:
             request is made to the available replica, the result given to the client will unsuccessful.
 
 Syncing the directory:
-    1. 
+    1. The project is available at https://github.com/Maddy1993/ScalableDistributedSystems/tree/master/Project-3. Please clone the directory to access it.
+    2. Run Maven clean install to install the dependencies
+        mvn clean install
+ 
 Program Execution:
     Server(n):
         javac src/main/java/com/northeastern/edu/server/RPCServer.java <client_communication_port> <server1_communication_port> <server2_communication_port> <server3_communication_port> <server4_communication_port> <server5_communication_port>
@@ -47,14 +50,3 @@ Program Execution:
         javac src/main/java/com/northeastern/edu/client/RPCClient.java 127.0.0.1 10001
         java src/main/java/com/northeastern/edu/client/RPCClient
 
-Execution:
-1. Unzip the folder.
-2. Load the project into IntelliJ (or any other IDE)
-3. Open a terminal and from the Root folder: MultiThreadedRPCClientServer, execute a maven clean install
-    mvn clean install
-4. Execute the server
-    Server main class: src/main/java/com/northeastern/edu/server/RPCServer.java
-    Arguments: PortNumber
-5. Execute the multiple clients:
-    Client main class: src/main/java/com/northeastern/edu/client/RPCClient.java
-    Arguments: ServerAddress PortNumber
